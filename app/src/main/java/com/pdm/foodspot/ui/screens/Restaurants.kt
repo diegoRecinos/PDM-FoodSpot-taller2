@@ -13,17 +13,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun Screen2(onBack: () -> Unit, modifier: Modifier = Modifier){
+fun HomeScreen(
+    onNavigateToDetail: () -> Unit,
+    onNavigateToSearch: () -> Unit
+
+){
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Text(text = "Screen 2")
+        Button(onClick = onNavigateToDetail) { Text("Screen 1") }
         Spacer(modifier = Modifier.height(16.dp))
-        Button(
-            onClick = onBack,
-            modifier = modifier
-        ) { Text("Back") }
+        Button(onClick = onNavigateToSearch) {Text("Screen 2") }
     }
 }

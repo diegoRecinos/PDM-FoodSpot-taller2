@@ -10,8 +10,8 @@ import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
 
 import com.pdm.foodspot.ui.screens.HomeScreen
-import com.pdm.foodspot.ui.screens.Screen2
-import com.pdm.foodspot.ui.screens.Screen1
+import com.pdm.foodspot.ui.screens.Detail
+import com.pdm.foodspot.ui.screens.Search
 
 @Composable
 fun App(modifier: Modifier = Modifier){
@@ -35,17 +35,17 @@ fun App(modifier: Modifier = Modifier){
                 //mapear cada objeto de routes.kt a un composable
                 entry<Routes.HomeScreen>{
                     HomeScreen(
-                        onNavigateToScreen1 = { backStack.add(Routes.Screen1) },
-                        onNavigateToScreen2 = { backStack.add(Routes.Screen2) }
+                        onNavigateToDetail = { backStack.add(Routes.Detail) },
+                        onNavigateToSearch = { backStack.add(Routes.Search) }
                     )
                 }
 
-                entry<Routes.Screen1>{
-                    Screen1(onBack = { backStack.removeLastOrNull() })
+                entry<Routes.Detail>{
+                    Detail(onBack = { backStack.removeLastOrNull() })
                 }
 
-                entry<Routes.Screen2>{
-                    Screen2(onBack = {backStack.removeLastOrNull()})
+                entry<Routes.Search>{
+                    Search(onBack = {backStack.removeLastOrNull()})
                 }
 
             }

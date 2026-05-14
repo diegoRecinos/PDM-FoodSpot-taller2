@@ -16,12 +16,12 @@ sealed interface Routes : NavKey {
     }
 
     @Serializable
-    data object Screen1: Routes{
+    data object Detail: Routes{
 
     }
 
     @Serializable
-    data object Screen2: Routes{
+    data object Search: Routes{
 
     }
 
