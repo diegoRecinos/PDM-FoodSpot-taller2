@@ -16,7 +16,7 @@ sealed interface Routes : NavKey {
     }
 
     @Serializable
-    data object DetailScreen: Routes{
+    data class DetailScreen(val restaurantId: Int): Routes{
 
     }
 
