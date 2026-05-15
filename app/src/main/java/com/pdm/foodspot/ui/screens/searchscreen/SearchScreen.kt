@@ -13,7 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun Search(onBack: () -> Unit, modifier: Modifier = Modifier){
+fun SearchScreen(onBack: () -> Unit, modifier: Modifier = Modifier){
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,

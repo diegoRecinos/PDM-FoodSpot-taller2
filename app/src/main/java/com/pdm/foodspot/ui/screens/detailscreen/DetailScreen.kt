@@ -13,7 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun Detail(
+fun DetailScreen(
     restaurantId: Int,
     onBack: () -> Unit,
     modifier: Modifier = Modifier) {

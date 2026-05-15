@@ -11,9 +11,9 @@ import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
 
 import com.pdm.foodspot.ui.screens.restaurantscreen.RestaurantsScreen
-import com.pdm.foodspot.ui.screens.detailscreen.Detail
+import com.pdm.foodspot.ui.screens.detailscreen.DetailScreen
 import com.pdm.foodspot.ui.screens.restaurantscreen.RestaurantsScreenViewModel
-import com.pdm.foodspot.ui.screens.searchscreen.Search
+import com.pdm.foodspot.ui.screens.searchscreen.SearchScreen
 
 @Composable
 fun App(modifier: Modifier = Modifier){
@@ -51,14 +51,14 @@ fun App(modifier: Modifier = Modifier){
                 }
 
                 entry<Routes.DetailScreen>{ route ->
-                    Detail(
+                    DetailScreen(
                         restaurantId = route.restaurantId,
                         onBack = { backStack.removeLastOrNull() }
                     )
                 }
 
                 entry<Routes.SearchScreen>{
-                    Search(onBack = {backStack.removeLastOrNull()})
+                    SearchScreen(onBack = {backStack.removeLastOrNull()})
                 }
 
             }
