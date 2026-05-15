@@ -14,7 +14,8 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun RestaurantsScreen(
-    onNavigateToDetail: () -> Unit,
+    viewModel: RestaurantsScreenViewModel,
+    onNavigateToDetail: (Int) -> Unit,
     onNavigateToSearch: () -> Unit
 
 ){
@@ -28,3 +29,5 @@ fun RestaurantsScreen(
         Button(onClick = onNavigateToSearch) {Text("Screen 2") }
     }
 }
+
+
