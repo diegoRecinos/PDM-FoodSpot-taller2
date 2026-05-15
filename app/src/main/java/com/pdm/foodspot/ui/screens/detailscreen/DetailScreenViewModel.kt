@@ -37,8 +37,9 @@ class DetailScreenViewModel(private val repository: RestaurantRepository) : View
                 _uiState.update { it.copy(isLoading = false, errorMessage = "Restaurant not found") }
                 }
 
-            } catch (e: Exception){
-
+            } catch (e: Exception) {
+                _uiState.update { it.copy(isLoading = false, errorMessage = "Error loading restaurant") }
+            }
         }
     }
 }
