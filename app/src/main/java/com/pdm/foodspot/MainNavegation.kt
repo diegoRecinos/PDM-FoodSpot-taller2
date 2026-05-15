@@ -9,9 +9,9 @@ import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
 
-import com.pdm.foodspot.ui.screens.HomeScreen
-import com.pdm.foodspot.ui.screens.Detail
-import com.pdm.foodspot.ui.screens.Search
+import com.pdm.foodspot.ui.screens.restaurantscreen.HomeScreen
+import com.pdm.foodspot.ui.screens.detailscreen.Detail
+import com.pdm.foodspot.ui.screens.searchscreen.Search
 
 @Composable
 fun App(modifier: Modifier = Modifier){

@@ -1,4 +1,4 @@
-package com.pdm.foodspot.ui.screens
+package com.pdm.foodspot.ui.screens.detailscreen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -13,17 +13,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun Search(onBack: () -> Unit, modifier: Modifier = Modifier){
+fun Detail(onBack: () -> Unit, modifier: Modifier = Modifier) {
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Text(text = "Screen 2")
+        Text(text = "Screen 1")
         Spacer(modifier = Modifier.height(16.dp))
         Button(
             onClick = onBack,
             modifier = modifier
-        ) { Text("Back") }
+        ) {Text("Back") }
     }
 }
