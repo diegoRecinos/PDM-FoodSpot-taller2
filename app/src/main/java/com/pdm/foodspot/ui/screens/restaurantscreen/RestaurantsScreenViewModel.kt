@@ -30,15 +30,21 @@ class RestaurantsScreenViewModel(private val repository: RestaurantRepository) :
     //logic to fetch restaurants and obtain data
      fun fetchRestaurants() {
         viewModelScope.launch {
+            //update loading state
             _uiState.update { it.copy(isLoading = true, errorMessage = null) }
 
             try {
+                //call suspend function to fetch restaurants
                 val restaurants = repository.getRestaurants()
+
+                //update ui state with fetched restaurants
                 _uiState.update {
                     it.copy(restaurants = restaurants, isLoading = false)
                 }
 
             } catch (e: Exception) {
+
+                //catch error
                 _uiState.update {
                     it.copy(isLoading = false, errorMessage = "error al cargar los restaurantes")
                 }

@@ -5,12 +5,14 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
 
 import com.pdm.foodspot.ui.screens.restaurantscreen.RestaurantsScreen
 import com.pdm.foodspot.ui.screens.detailscreen.Detail
+import com.pdm.foodspot.ui.screens.restaurantscreen.RestaurantsScreenViewModel
 import com.pdm.foodspot.ui.screens.searchscreen.Search
 
 @Composable
@@ -34,14 +36,25 @@ fun App(modifier: Modifier = Modifier){
             entryProvider = entryProvider{
                 //mapear cada objeto de routes.kt a un composable
                 entry<Routes.RestaurantScreen>{
+
+                    //instanciar el viewmodel
+
+                    val viewModel: RestaurantsScreenViewModel = viewModel()
+
                     RestaurantsScreen(
-                        onNavigateToDetail = { backStack.add(Routes.DetailScreen) },
+                        //pasar el viewmodel
+                        viewModel = viewModel,
+                        onNavigateToDetail = { id ->
+                            backStack.add(Routes.DetailScreen(restaurantId = id)) },
                         onNavigateToSearch = { backStack.add(Routes.SearchScreen) }
                     )
                 }
 
-                entry<Routes.DetailScreen>{
-                    Detail(onBack = { backStack.removeLastOrNull() })
+                entry<Routes.DetailScreen>{ route ->
+                    Detail(
+                        restaurantId = route.restaurantId,
+                        onBack = { backStack.removeLastOrNull() }
+                    )
                 }
 
                 entry<Routes.SearchScreen>{

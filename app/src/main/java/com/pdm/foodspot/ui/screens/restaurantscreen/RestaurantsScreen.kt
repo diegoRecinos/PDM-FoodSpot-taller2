@@ -24,7 +24,10 @@ fun RestaurantsScreen(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Button(onClick = onNavigateToDetail) { Text("Screen 1") }
+        Button(
+            onClick = {onNavigateToDetail(1)
+            }
+        ) { Text("Screen 1") }
         Spacer(modifier = Modifier.height(16.dp))
         Button(onClick = onNavigateToSearch) {Text("Screen 2") }
     }

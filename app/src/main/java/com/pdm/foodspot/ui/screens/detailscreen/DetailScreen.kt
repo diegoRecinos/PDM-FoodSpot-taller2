@@ -13,7 +13,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun Detail(onBack: () -> Unit, modifier: Modifier = Modifier) {
+fun Detail(
+    restaurantId: Int,
+    onBack: () -> Unit,
+    modifier: Modifier = Modifier) {
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
