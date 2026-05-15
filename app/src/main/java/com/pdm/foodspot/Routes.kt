@@ -11,17 +11,17 @@ import kotlinx.serialization.Serializable
 sealed interface Routes : NavKey {
 
     @Serializable
-    data object HomeScreen: Routes{
+    data object RestaurantScreen: Routes{
 
     }
 
     @Serializable
-    data object Detail: Routes{
+    data object DetailScreen: Routes{
 
     }
 
     @Serializable
-    data object Search: Routes{
+    data object SearchScreen: Routes{
 
     }
 

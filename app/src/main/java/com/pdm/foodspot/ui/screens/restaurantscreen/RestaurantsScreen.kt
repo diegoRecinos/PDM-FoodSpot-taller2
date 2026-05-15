@@ -13,7 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun HomeScreen(
+fun RestaurantsScreen(
     onNavigateToDetail: () -> Unit,
     onNavigateToSearch: () -> Unit
 

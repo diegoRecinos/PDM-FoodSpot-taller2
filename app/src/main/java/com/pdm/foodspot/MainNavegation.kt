@@ -9,7 +9,7 @@ import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
 
-import com.pdm.foodspot.ui.screens.restaurantscreen.HomeScreen
+import com.pdm.foodspot.ui.screens.restaurantscreen.RestaurantsScreen
 import com.pdm.foodspot.ui.screens.detailscreen.Detail
 import com.pdm.foodspot.ui.screens.searchscreen.Search
 
@@ -17,7 +17,7 @@ import com.pdm.foodspot.ui.screens.searchscreen.Search
 fun App(modifier: Modifier = Modifier){
     //creando el backstack
     //backstack needs to know the initial destination
-    val backStack = rememberNavBackStack(Routes.HomeScreen)
+    val backStack = rememberNavBackStack(Routes.RestaurantScreen)
 
     Scaffold(
         modifier = Modifier.fillMaxSize(),
@@ -33,18 +33,18 @@ fun App(modifier: Modifier = Modifier){
 
             entryProvider = entryProvider{
                 //mapear cada objeto de routes.kt a un composable
-                entry<Routes.HomeScreen>{
-                    HomeScreen(
-                        onNavigateToDetail = { backStack.add(Routes.Detail) },
-                        onNavigateToSearch = { backStack.add(Routes.Search) }
+                entry<Routes.RestaurantScreen>{
+                    RestaurantsScreen(
+                        onNavigateToDetail = { backStack.add(Routes.DetailScreen) },
+                        onNavigateToSearch = { backStack.add(Routes.SearchScreen) }
                     )
                 }
 
-                entry<Routes.Detail>{
+                entry<Routes.DetailScreen>{
                     Detail(onBack = { backStack.removeLastOrNull() })
                 }
 
-                entry<Routes.Search>{
+                entry<Routes.SearchScreen>{
                     Search(onBack = {backStack.removeLastOrNull()})
                 }
 
