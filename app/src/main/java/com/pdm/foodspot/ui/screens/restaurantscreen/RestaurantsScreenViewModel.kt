@@ -3,6 +3,7 @@ package com.pdm.foodspot.ui.screens.restaurantscreen
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.pdm.foodspot.data.model.Restaurant
+import com.pdm.foodspot.data.repository.RestaurantApiRepository
 import com.pdm.foodspot.data.repository.RestaurantRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -16,7 +17,9 @@ data class RestaurantsUiState(
     val isLoading: Boolean = false,
     val errorMessage: String? = null
 )
-class RestaurantsScreenViewModel(private val repository: RestaurantRepository) : ViewModel() {
+class RestaurantsScreenViewModel(
+    //instanciar por defecto el repositorio con el constructor con repositoryapi
+    private val repository: RestaurantRepository = RestaurantApiRepository()) : ViewModel() {
     //internal mutable  state
     private val _uiState = MutableStateFlow(RestaurantsUiState() )
 
