@@ -80,7 +80,7 @@ fun SearchScreen(
                     Text(
                         text = "No se encontraron resultados",
                         modifier = Modifier.align(Alignment.Center),
-                        style = MaterialTheme.typography.bodyLarge`
+                        style = MaterialTheme.typography.bodyLarge
                     )
                 } else {
                     LazyColumn(
