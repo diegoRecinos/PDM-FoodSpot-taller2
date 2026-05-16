@@ -1,6 +1,5 @@
 package com.pdm.foodspot.data.dummy
 
-import com.pdm.foodspot.data.model.Dish
 import com.pdm.foodspot.data.model.Restaurant
 
 val restaurantList = listOf(
@@ -26,7 +25,7 @@ val restaurantList = listOf(
         description = "Fresh sushi and Japanese specialty rolls.",
         imageUrl = "https://images.unsplash.com/photo-1579871494447-9811cf80d66c",
         categories = listOf("Asiática"),
-        menu = burgerDishes
+        menu = sushiDishes
     ),
     Restaurant(
         id = 4,
@@ -34,7 +33,7 @@ val restaurantList = listOf(
         description = "Vibrant Mexican street food.",
         imageUrl = "https://images.unsplash.com/photo-1565299585323-38d6b0865b47",
         categories = listOf("Comida Rápida"),
-        menu = pizzaDishes
+        menu = tacoDishes
     ),
     Restaurant(
         id = 5,
@@ -42,7 +41,7 @@ val restaurantList = listOf(
         description = "Fresh salads and healthy bowls.",
         imageUrl = "https://images.unsplash.com/photo-1512621776951-a57141f2eefd",
         categories = listOf("Saludable"),
-        menu = burgerDishes
+        menu = saladDishes
     ),
     Restaurant(
         id = 6,
@@ -50,7 +49,7 @@ val restaurantList = listOf(
         description = "Homemade pasta with traditional sauces.",
         imageUrl = "https://images.unsplash.com/photo-1473093226795-af9932fe5856",
         categories = listOf("Italiana"),
-        menu = pizzaDishes
+        menu = pastaDishes
     ),
     Restaurant(
         id = 7,
@@ -58,7 +57,7 @@ val restaurantList = listOf(
         description = "Cakes, cookies and delicious pastries.",
         imageUrl = "https://images.unsplash.com/photo-1551024601-bec78aea704b",
         categories = listOf("Postres"),
-        menu = burgerDishes
+        menu = dessertDishes
     ),
     Restaurant(
         id = 8,
@@ -66,7 +65,7 @@ val restaurantList = listOf(
         description = "Stir-fry noodles and Asian flavors.",
         imageUrl = "https://images.unsplash.com/photo-1512058564366-18510be2db19",
         categories = listOf("Asiática"),
-        menu = pizzaDishes
+        menu = sushiDishes
     ),
     Restaurant(
         id = 9,
@@ -74,7 +73,7 @@ val restaurantList = listOf(
         description = "Organic ingredients for a better life.",
         imageUrl = "https://images.unsplash.com/photo-1490645935967-10de6ba17061",
         categories = listOf("Saludable"),
-        menu = burgerDishes
+        menu = saladDishes
     ),
     Restaurant(
         id = 10,
@@ -82,7 +81,7 @@ val restaurantList = listOf(
         description = "Premium coffee and refreshing beverages.",
         imageUrl = "https://images.unsplash.com/photo-1541167760496-1628856ab772",
         categories = listOf("Bebidas"),
-        menu = pizzaDishes
+        menu = drinkDishes
     ),
     Restaurant(
         id = 11,
@@ -90,7 +89,7 @@ val restaurantList = listOf(
         description = "Handcrafted ice cream and shakes.",
         imageUrl = "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f",
         categories = listOf("Postres"),
-        menu = burgerDishes
+        menu = dessertDishes
     ),
     Restaurant(
         id = 12,
@@ -98,7 +97,7 @@ val restaurantList = listOf(
         description = "Natural fruit smoothies and juices.",
         imageUrl = "https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6",
         categories = listOf("Bebidas"),
-        menu = pizzaDishes
+        menu = drinkDishes
     ),
     Restaurant(
         id = 13,
@@ -106,6 +105,6 @@ val restaurantList = listOf(
         description = "The best fried chicken in town.",
         imageUrl = "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec",
         categories = listOf("Comida Rápida"),
-        menu = burgerDishes
+        menu = chickenDishes
     )
 )
