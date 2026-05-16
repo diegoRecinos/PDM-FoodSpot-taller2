@@ -9,6 +9,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
+import com.pdm.foodspot.data.repository.RestaurantApiRepository
 
 import com.pdm.foodspot.ui.screens.restaurantscreen.RestaurantsScreen
 import com.pdm.foodspot.ui.screens.detailscreen.DetailScreen
@@ -37,8 +38,7 @@ fun App(modifier: Modifier = Modifier){
                 //mapear cada objeto de routes.kt a un composable
                 entry<Routes.RestaurantScreen>{
 
-                    //instanciar el viewmodel
-
+                    //instanciar el viewmodel con factory para inyectar el repositorio
                     val viewModel: RestaurantsScreenViewModel = viewModel()
 
                     RestaurantsScreen(

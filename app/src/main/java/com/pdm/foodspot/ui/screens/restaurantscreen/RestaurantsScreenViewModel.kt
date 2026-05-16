@@ -10,13 +10,15 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
+import com.pdm.foodspot.data.repository.RestaurantApiRepository
+
 //define ui state
 data class RestaurantsUiState(
     val restaurants: List<Restaurant> = emptyList(),
     val isLoading: Boolean = false,
     val errorMessage: String? = null
 )
-class RestaurantsScreenViewModel(private val repository: RestaurantRepository) : ViewModel() {
+class RestaurantsScreenViewModel(private val repository: RestaurantRepository = RestaurantApiRepository()) : ViewModel() {
     //internal mutable  state
     private val _uiState = MutableStateFlow(RestaurantsUiState() )
 
