@@ -20,6 +20,9 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material.icons.Icons
 import androidx.compose.material3.Icon
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 
 
 @Composable
@@ -29,6 +32,9 @@ fun RestaurantsScreen(
     onNavigateToSearch: () -> Unit
 
 ) {
+
+    val uiState by viewModel.uiState.collectAsState()
+
     Scaffold(
         topBar = {
             MainTopBar(
@@ -47,27 +53,34 @@ fun RestaurantsScreen(
         }
     ) { innerPadding ->
 
-        Box(modifier = Modifier.padding(innerPadding)) {
-
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+        ) {
+            when {
+                uiState.isLoading -> {
+                    CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
+                }
+                uiState.errorMessage != null -> {
+                    Text(
+                        text = uiState.errorMessage ?: "Unknown error",
+                        fontWeight = FontWeight.Bold,
+                        modifier = Modifier.align(Alignment.Center)
+                    )
+                }
+                else -> {
+                    RestaurantListContent(
+                        restaurants = uiState.restaurants,
+                        onRestaurantClick = onNavigateToDetail
+                    )
+                }
+            }
         }
-
-
     }
 
 
 }
-//    Column(
-//        modifier = Modifier.fillMaxSize(),
-//        horizontalAlignment = Alignment.CenterHorizontally,
-//        verticalArrangement = Arrangement.Center
-//    ) {
-//        Button(
-//            onClick = {onNavigateToDetail(1)
-//            }
-//        ) { Text("Screen 1") }
-//        Spacer(modifier = Modifier.height(16.dp))
-//        Button(onClick = onNavigateToSearch) {Text("Screen 2") }
-//    }
 
 
 
