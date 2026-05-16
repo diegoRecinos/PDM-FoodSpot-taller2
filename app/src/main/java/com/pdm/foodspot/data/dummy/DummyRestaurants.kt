@@ -88,7 +88,7 @@ val restaurantList = listOf(
         id = 11,
         name = "Ice Cream Joy",
         description = "Handcrafted ice cream and shakes.",
-        imageUrl = "https://images.unsplash.com/photo-1501443762994-82bd5dabb892",
+        imageUrl = "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f",
         categories = listOf("Postres"),
         menu = burgerDishes
     ),
@@ -104,7 +104,7 @@ val restaurantList = listOf(
         id = 13,
         name = "Chicken Crispy",
         description = "The best fried chicken in town.",
-        imageUrl = "https://images.unsplash.com/photo-1562967914-6cbb241c2b3f",
+        imageUrl = "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec",
         categories = listOf("Comida Rápida"),
         menu = burgerDishes
     )
