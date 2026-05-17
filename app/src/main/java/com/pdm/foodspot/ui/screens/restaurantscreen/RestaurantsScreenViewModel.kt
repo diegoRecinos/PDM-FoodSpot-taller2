@@ -36,6 +36,8 @@ class RestaurantsScreenViewModel(
 
     // fetch restaurants asynchronously
      fun fetchRestaurants() {
+         //A Coroutine Builder suspend function
+         // cannot be called from a regular function directly. It can only be called from viewModelScope.launch
         viewModelScope.launch {
             // Set the state to "loading" before starting the request
             _uiState.update { it.copy(isLoading = true, errorMessage = null) }

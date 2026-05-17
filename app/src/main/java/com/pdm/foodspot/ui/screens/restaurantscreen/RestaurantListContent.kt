@@ -14,7 +14,7 @@ fun RestaurantListContent(
     restaurants: List<Restaurant>,
     onRestaurantClick: (Int) -> Unit
 ) {
-    // Agrupamos los restaurantes por cada una de sus categorías
+    // Categories are derived dynamically from the existing restaurant list, avoiding a hardcoded category list.
     val categoriesMap = remember(restaurants) {
         val map = mutableMapOf<String, MutableList<Restaurant>>()
         restaurants.forEach { restaurant ->
