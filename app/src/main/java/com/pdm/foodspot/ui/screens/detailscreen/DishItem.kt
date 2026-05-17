@@ -13,6 +13,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
@@ -60,9 +61,16 @@ fun DishItem(
                 Button(
                     onClick = onAddToCart,
                     modifier = Modifier.align(Alignment.End),
-                    contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp)
+                    contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Color(65,46,135),
+                        contentColor = Color.White
+                    )
                 ) {
-                    Text(text = "Agregar al carrito", style = MaterialTheme.typography.labelLarge)
+                    Text(text = "Agregar al carrito",
+                        style = MaterialTheme.typography.labelLarge,
+                        color = Color.White
+                    )
                 }
             }
         }
