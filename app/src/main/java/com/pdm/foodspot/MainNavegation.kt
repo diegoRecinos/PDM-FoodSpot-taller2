@@ -58,7 +58,11 @@ fun App(modifier: Modifier = Modifier){
                 }
 
                 entry<Routes.SearchScreen>{
-                    SearchScreen(onBack = {backStack.removeLastOrNull()})
+                    SearchScreen(
+                        onBack = {backStack.removeLastOrNull()},
+                        onRestaurantClick = { id -> backStack.add(Routes.DetailScreen(restaurantId = id))}
+                    )
+
                 }
 
             }
