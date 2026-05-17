@@ -53,7 +53,7 @@ fun RestaurantDetailContent(
                     style = MaterialTheme.typography.bodyLarge
                 )
                 Spacer(modifier = Modifier.height(16.dp))
-                HorizontalDivider()
+
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
                     text = "Menú",

@@ -19,6 +19,7 @@ import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import com.pdm.foodspot.data.model.Restaurant
 import androidx.compose.foundation.layout.width
+import androidx.compose.ui.graphics.Color
 
 @Composable
 fun RestaurantItem(
@@ -29,7 +30,10 @@ fun RestaurantItem(
         modifier = Modifier
             .width(160.dp)
             .clickable(onClick = onClick),
-        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = Color.White
+        )
     ) {
         Column {
             AsyncImage(
@@ -51,7 +55,8 @@ fun RestaurantItem(
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.SemiBold,
                 modifier = Modifier.padding(8.dp),
-                maxLines = 1
+                maxLines = 1,
+                color = Color.Black
             )
         }
     }

@@ -5,7 +5,7 @@ import com.pdm.foodspot.data.model.Restaurant
 val restaurantList = listOf(
     Restaurant(
         id = 1,
-        name = "The Gourmet Burger",
+        name = "The Burger",
         description = "Juicy artisanal burgers with premium ingredients.",
         imageUrl = "https://images.unsplash.com/photo-1568901346375-23c9450c58cd",
         categories = listOf("Comida Rápida"),
@@ -13,9 +13,9 @@ val restaurantList = listOf(
     ),
     Restaurant(
         id = 2,
-        name = "Pizza del Mondo",
+        name = "Pizza Express",
         description = "Authentic wood-fired pizzas.",
-        imageUrl = "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3",
+        imageUrl = "https://images.unsplash.com/photo-1628840042765-356cda07504e",
         categories = listOf("Italiana"),
         menu = pizzaDishes
     ),
@@ -106,5 +106,37 @@ val restaurantList = listOf(
         imageUrl = "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58",
         categories = listOf("Comida Rápida"),
         menu = chickenDishes
+    ),
+    Restaurant(
+        id = 14,
+        name = "Zen Noodle House",
+        description = "Hand-pulled noodles and authentic Asian broth.",
+        imageUrl = "https://images.unsplash.com/photo-1585032226651-759b368d7246",
+        categories = listOf("Asiática"),
+        menu = sushiDishes
+    ),
+    Restaurant(
+        id = 15,
+        name = "Tokyo Ramen",
+        description = "Rich and creamy ramen bowls.",
+        imageUrl = "https://images.unsplash.com/photo-1569718212165-3a8278d5f624",
+        categories = listOf("Asiática"),
+        menu = sushiDishes
+    ),
+    Restaurant(
+        id = 16,
+        name = "Thai Spice",
+        description = "Aromatic Thai curries and stir-fries.",
+        imageUrl = "https://images.unsplash.com/photo-1559314809-0d155014e29e",
+        categories = listOf("Asiática"),
+        menu = sushiDishes
+    ),
+    Restaurant(
+        id = 17,
+        name = "Bella Napoli",
+        description = "Traditional Neapolitan pizzas with fresh ingredients.",
+        imageUrl = "https://images.unsplash.com/photo-1628840042765-356cda07504e",
+        categories = listOf("Italiana"),
+        menu = pizzaDishes
     )
 )
