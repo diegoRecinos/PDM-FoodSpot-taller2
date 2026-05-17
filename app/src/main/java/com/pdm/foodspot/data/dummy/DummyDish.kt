@@ -17,7 +17,7 @@ val pizzaDishes = listOf(
 val sushiDishes = listOf(
     Dish(7, "Salmon Nigiri Set", "Fresh Atlantic salmon over seasoned sushi rice.", "https://images.unsplash.com/photo-1583623025817-d180a2221d0a"),
     Dish(8, "Dragon Roll", "Tempura shrimp, cucumber, topped with avocado and unagi sauce.", "https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56"),
-    Dish(9, "Tuna Sashimi", "Premium cuts of fresh bluefin tuna.", "https://images.unsplash.com/photo-1534482421-0d45a48903ee")
+    Dish(9, "Tuna Sashimi", "Premium cuts of fresh bluefin tuna.", "https://images.unsplash.com/photo-1583623025817-d180a2221d0a")
 )
 
 val tacoDishes = listOf(

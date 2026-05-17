@@ -25,15 +25,16 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.graphics.Color
 
-
+// view displays what view model tells
 @Composable
 fun RestaurantsScreen(
+    // we receive viewmodel to observe the state
     viewModel: RestaurantsScreenViewModel,
     onNavigateToDetail: (Int) -> Unit,
     onNavigateToSearch: () -> Unit
-
 ) {
 
+    // observe the state of the view model and store it in a variable called uiState if something changes compose changes state
     val uiState by viewModel.uiState.collectAsState()
 
     Scaffold(
@@ -50,8 +51,6 @@ fun RestaurantsScreen(
                     }
                 }
             )
-
-
         }
     ) { innerPadding ->
 
@@ -60,10 +59,14 @@ fun RestaurantsScreen(
                 .fillMaxSize()
                 .padding(innerPadding)
         ) {
+
             when {
+                // if loading, show a loading
                 uiState.isLoading -> {
                     CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
                 }
+
+                // error
                 uiState.errorMessage != null -> {
                     Text(
                         text = uiState.errorMessage ?: "Unknown error",
@@ -71,6 +74,7 @@ fun RestaurantsScreen(
                         modifier = Modifier.align(Alignment.Center)
                     )
                 }
+                // if data is retrieved we show list of restaurants
                 else -> {
                     RestaurantListContent(
                         restaurants = uiState.restaurants,
@@ -80,6 +84,4 @@ fun RestaurantsScreen(
             }
         }
     }
-
-
 }
