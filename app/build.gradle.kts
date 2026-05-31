@@ -60,6 +60,9 @@ dependencies {
 
     //viewmodel
     implementation(libs.androidx.lifecycle.viewmodel.compose)
+    //androidx.lifecycle:lifecycle-viewmodel-ktx
+    //androidx.lifecycle:lifecycle-runtime-ktx
+    //androidx.lifecycle:lifecycle-viewmodel-compose
 
     //navigation
     implementation(libs.androidx.navigation3.runtime)

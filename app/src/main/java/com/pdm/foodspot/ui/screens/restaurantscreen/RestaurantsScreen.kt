@@ -24,12 +24,13 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.graphics.Color
+import androidx.lifecycle.viewmodel.compose.viewModel
 
 // view displays what view model tells
 @Composable
-fun RestaurantsScreen(
+fun     RestaurantsScreen(
     // we receive viewmodel to observe the state
-    viewModel: RestaurantsScreenViewModel,
+    viewModel: RestaurantsScreenViewModel = viewModel(),
     onNavigateToDetail: (Int) -> Unit,
     onNavigateToSearch: () -> Unit
 ) {

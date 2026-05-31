@@ -20,7 +20,8 @@ data class RestaurantsUiState(
 
 // The ViewModel controls the data and logic of the screen survives configuration changes
 class RestaurantsScreenViewModel(
-    // instance of the repository, Connecting to the repository  to fetch data using an interface
+    // instance of the repository with viewmodel constructor, Connecting to the repository  to fetch data using it
+    // heritage viewmodel class
     private val repository: RestaurantRepository = RestaurantApiRepository()) : ViewModel() {
     
     // Private state: viewmodel observes the state of the UI and updates it when the data changes
@@ -52,7 +53,7 @@ class RestaurantsScreenViewModel(
                 }
 
             } catch (e: Exception) {
-                // save the error message to the state so the UI can notify the user
+                // error message to the state UI
                 _uiState.update {
                     it.copy(isLoading = false, errorMessage = "Error loading restaurants")
                 }

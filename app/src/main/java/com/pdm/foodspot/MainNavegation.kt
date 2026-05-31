@@ -39,11 +39,11 @@ fun App(modifier: Modifier = Modifier){
 
                     //instanciar el viewmodel
 
-                    val viewModel: RestaurantsScreenViewModel = viewModel()
+                    //val viewModel: RestaurantsScreenViewModel = viewModel()
 
                     RestaurantsScreen(
                         //pasar el viewmodel
-                        viewModel = viewModel,
+                        //viewModel = viewModel,
                         onNavigateToDetail = { id ->
                             backStack.add(Routes.DetailScreen(restaurantId = id)) },
                         onNavigateToSearch = { backStack.add(Routes.SearchScreen) }
